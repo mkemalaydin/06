@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Doç. Dr. Mehmet Kemal Aydın | Akademik Portal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#020617;
+    --card:#0f172acc;
+    --card-border:rgba(255,255,255,0.08);
+    --accent:#38bdf8;
+    --accent-soft:rgba(56,189,248,0.18);
+    --text:#f8fafc;
+    --muted:#94a3b8;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 20px;
+    color:var(--text);
+
+    background:
+        radial-gradient(circle at top left,#0f172a 0%,transparent 35%),
+        radial-gradient(circle at bottom right,#082f49 0%,transparent 30%),
+        linear-gradient(135deg,#020617,#0f172a);
+}
+
+/* Ana Kart */
+
+.wrapper{
+    width:100%;
+    max-width:500px;
+
+    background:var(--card);
+    border:1px solid var(--card-border);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:28px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.45),
+        inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+/* Avatar */
+
+.avatar{
+    width:130px;
+    height:130px;
+
+    margin:0 auto 24px auto;
+
+    border-radius:50%;
+
+    background-image:url('./avatar.png');
+    background-size:cover;
+    background-position:center;
+
+    border:4px solid rgba(56,189,248,0.85);
+
+    box-shadow:
+        0 0 0 8px rgba(56,189,248,0.08),
+        0 15px 35px rgba(0,0,0,0.45);
+
+    transition:transform .35s ease;
+}
+
+.avatar:hover{
+    transform:scale(1.03);
+}
+
+/* Başlık */
+
+h1{
+    font-size:1.9rem;
+    font-weight:700;
+    letter-spacing:-0.5px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:var(--accent);
+    font-size:.92rem;
+    font-weight:500;
+    letter-spacing:2px;
+    margin-bottom:38px;
+}
+
+/* Linkler */
+
+.links{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.btn{
+    text-decoration:none;
+    color:var(--text);
+
+    padding:18px 20px;
+
+    border-radius:18px;
+
+    background:rgba(255,255,255,0.04);
+
+    border:1px solid rgba(255,255,255,0.06);
+
+    transition:all .28s ease;
+
+    font-weight:500;
+    font-size:.97rem;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.btn::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.06),
+        transparent
+    );
+    transform:translateX(-100%);
+    transition:transform .6s ease;
+}
+
+.btn:hover::before{
+    transform:translateX(100%);
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+
+    background:var(--accent-soft);
+
+    border-color:rgba(56,189,248,0.4);
+
+    box-shadow:
+        0 10px 25px rgba(56,189,248,0.15);
+}
+
+/* İletişim */
+
+.contact-row{
+    margin-top:34px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+
+    justify-content:center;
+}
+
+.icon-btn{
+    text-decoration:none;
+    color:var(--muted);
+
+    font-size:.83rem;
+    font-weight:500;
+
+    padding:10px 16px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.03);
+
+    border:1px solid rgba(255,255,255,0.05);
+
+    transition:all .25s ease;
+}
+
+.icon-btn:hover{
+    color:white;
+    border-color:rgba(56,189,248,0.35);
+    background:rgba(56,189,248,0.08);
+}
+
+/* Footer */
+
+.footer{
+    margin-top:42px;
+    color:rgba(255,255,255,0.35);
+    font-size:.74rem;
+    letter-spacing:.3px;
+}
+
+/* Mobil */
+
+@media(max-width:600px){
+
+    .wrapper{
+        padding:35px 22px;
+        border-radius:24px;
+    }
+
+    h1{
+        font-size:1.55rem;
+    }
+
+    .btn{
+        padding:16px;
+        font-size:.92rem;
+    }
+
+    .avatar{
+        width:110px;
+        height:110px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <div class="avatar"></div>
+
+    <h1>Doç. Dr. Mehmet Kemal Aydın</h1>
+
+    <p class="subtitle">HİTİT ÜNİVERSİTESİ</p>
+
+    <div class="links">
+
+        <a href="https://mkemalaydin.github.io/ods/" class="btn">
+            Ölçme Değerlendirme Yönetim Sistemi
+        </a>
+
+        <a href="https://mkemalaydin.github.io/yd/" class="btn">
+            YÖKAK Değerlendirme Sistemi
+        </a>
+
+        <a href="https://mkemalaydin.github.io/pd/" class="btn">
+            ERASMUS Proje Değerlendirme Sistemi
+        </a>
+
+    </div>
+
+    <div class="contact-row">
+
+        <a href="https://web.hitit.edu.tr/mehmetkemalaydin" class="icon-btn">
+            Akademik Profil
+        </a>
+
+        <a href="mailto:mehmetkemalaydin@hitit.edu.tr" class="icon-btn">
+            E-posta
+        </a>
+
+        <a href="https://www.instagram.com/mehmetkemalaydin/" class="icon-btn">
+            Instagram
+        </a>
+
+        <a href="https://scholar.google.com/citations?user=J6GeXAkAAAAJ&hl=tr&oi=ao" class="icon-btn">
+            Google Scholar
+        </a>
+
+    </div>
+
+    <div class="footer">
+        © 2026 | Doç. Dr. Mehmet Kemal Aydın
+    </div>
+
+</div>
+
+</body>
+</html>
